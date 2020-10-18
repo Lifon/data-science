@@ -3,7 +3,7 @@ student_details = {
     #"course_taken" :["Machine Learning","Data Mining","Fuzzy","SQA"],
     "machine learning":[4,3,3.3,4],
     "Data Mining":[4,2.75,2.5,3.75],
-    "Fuzzy":[4,3.25,3.3,4],
+    "Fuzzy":[4,3,3.3,4],
     "SQA":[4,4,3.0,3.3]
     
     }
