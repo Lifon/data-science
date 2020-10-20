@@ -75,10 +75,48 @@ import pandas as pd
 
 # Any number of Argument
 
-def functionWithVariableArgument(a,b,**options):
-    if options.get("action") == "sum":
-                return a+b
-    if options.get("action") == "subtract":
-        return a-b
+# def functionWithVariableArgument(a,b,**options):
+#     if options.get("action") == "sum":
+#                 return a+b
+#     if options.get("action") == "subtract":
+#         return a-b
 
-print(functionWithVariableArgument(1, 2, action ="sum"))
+# print(functionWithVariableArgument(1, 2, action ="sum"))
+
+# Exception Handling
+
+# student = {"name":"Abdul Motaleb", "Dept":"CSE"}
+
+# def getLastName():
+#     words = student["name"].split()
+#     try:
+#         print(words[-1])
+#     Exception(IndexError(args)):
+#         print("Index out of bound error")
+# getLastName()
+
+#-- sets: list without duplicate value if we write any duplicate value it will 
+# appear once only--
+
+# departments = set(["IT","CSE","IT"])
+# print(departments)
+
+#-- JSON in python
+# There are two basic format of JSON data one is string and another is object 
+# Data strcutures ---
+
+# import pickle
+
+# pickled_string = pickle.dumps([1,2,3,'a',"string element"])
+# print(pickle.loads(pickled_string))
+
+#-- PARTIAL FUNCTION -- 
+
+from functools import partial
+
+def func(u,v,w,x):
+    return  u*4 + v*3 + w*2 + x
+partial_function = partial(func,5,5,5)
+
+print(partial_function(15)) #this argument is for last parameter
+ 
