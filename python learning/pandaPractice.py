@@ -121,12 +121,41 @@ import pandas as pd
 # print(partial_function(15)) #this argument is for last parameter
  
 # -- Code Introspection --
-class Student:
-    name = ""
-    id = 123
-    def getDetails(self,name):
-        self.name = name
-        print(self.name,self.id)
-AML = Student()
-AML.getDetails("Abdul Motaleb")
-print(dir(Student))
+# class Student:
+#     name = ""
+#     id = 123
+#     def getDetails(self,name):
+#         self.name = name
+#         print(self.name,self.id)
+# AML = Student()
+# AML.getDetails("Abdul Motaleb")
+# print(dir(Student))
+
+#--Clousers--
+
+# def outerFunction(message):
+   
+#     #self.message = message
+#     def innerFunction():
+#         #print(message)
+#         nonlocal message
+#         message = "Salam"
+#         print(message)
+#     innerFunction()
+
+# outerFunction("Assalamualaikum")
+
+
+def outerFunction(message):
+   
+    #self.message = message
+    def innerFunction():
+        #print(message)
+        nonlocal message
+        message = "Salam"
+        print(message)
+    return innerFunction
+
+ref_fun = outerFunction("Assalamualaikum")
+
+ref_fun()
