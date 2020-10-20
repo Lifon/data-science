@@ -37,18 +37,48 @@ import pandas as pd
 #     print(randomNumber)
 
 #1 1 2 3 5
-def getFibonacci(n):
-    a = 1
-    b = 1
-    for i in range(1,n):
-        #print(i)
-        if i<3:
-            yield 1
-        else:
-            yield (a+b)
-            a,b = b,(a+b)
+# def getFibonacci(n):
+#     a = 1
+#     b = 1
+#     for i in range(1,n):
+#         #print(i)
+#         if i<3:
+#             yield 1
+#         else:
+#             yield (a+b)
+#             a,b = b,(a+b)
 
-for value in getFibonacci(5):
-    print(value)
-        
-    
+# for value in getFibonacci(5):
+#     print(value)
+# import types       
+# if type(getFibonacci(1)) == types.GeneratorType:
+#     print("OK")
+
+# List practice:
+
+# sentence = "Rashed sir is a very strict person"
+# words = sentence.split()
+# word_length = []
+# for word in words:
+#     if word!='is':
+#         word_length.append(len(word))
+
+# print(word_length)
+
+# integer_numbers = [10,-5,10,-5,6,7,8]
+# positive_integers = []
+# print("All numbers",integer_numbers)
+# for number in integer_numbers:
+#     if number>-1:
+#         positive_integers.append(number)
+# print("Integer Numbers",positive_integers)
+
+# Any number of Argument
+
+def functionWithVariableArgument(a,b,**options):
+    if options.get("action") == "sum":
+                return a+b
+    if options.get("action") == "subtract":
+        return a-b
+
+print(functionWithVariableArgument(1, 2, action ="sum"))
