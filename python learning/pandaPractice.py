@@ -112,11 +112,21 @@ import pandas as pd
 
 #-- PARTIAL FUNCTION -- 
 
-from functools import partial
+# from functools import partial
 
-def func(u,v,w,x):
-    return  u*4 + v*3 + w*2 + x
-partial_function = partial(func,5,5,5)
+# def func(u,v,w,x):
+#     return  u*4 + v*3 + w*2 + x
+# partial_function = partial(func,5,5,5)
 
-print(partial_function(15)) #this argument is for last parameter
+# print(partial_function(15)) #this argument is for last parameter
  
+# -- Code Introspection --
+class Student:
+    name = ""
+    id = 123
+    def getDetails(self,name):
+        self.name = name
+        print(self.name,self.id)
+AML = Student()
+AML.getDetails("Abdul Motaleb")
+print(dir(Student))
