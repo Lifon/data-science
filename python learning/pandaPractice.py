@@ -18,7 +18,7 @@
 #     i+=1
 # #student_details["CGPA"] =int(student_details.get("Data Mining"))*3
 
-import pandas as pd
+#import pandas as pd
 
 # brick = pd.DataFrame(student_details)
 # print(brick)
@@ -146,16 +146,32 @@ import pandas as pd
 # outerFunction("Assalamualaikum")
 
 
-def outerFunction(message):
+# def outerFunction(message):
    
-    #self.message = message
-    def innerFunction():
-        #print(message)
-        nonlocal message
-        message = "Salam"
-        print(message)
-    return innerFunction
+#     #self.message = message
+#     def innerFunction():
+#         #print(message)
+#         nonlocal message
+#         message = "Salam"
+#         print(message)
+#     return innerFunction
 
-ref_fun = outerFunction("Assalamualaikum")
+# ref_fun = outerFunction("Assalamualaikum")
 
-ref_fun()
+# ref_fun()
+
+#--Practicing kaggale code of Rain Forecasting in covid data --
+
+import pandas as pd
+import matplotlib.pyplot as plt 
+import seaborn as sns
+covid_data = pd.read_csv('./covid data set/worldometers_snapshots_April18_to_August1.csv')
+print(covid_data.head())
+plt.figure(figsize=(14,6))
+covid_data['Serious or Critical'].plot()
+
+covid_data['Serious or Critical'].plot(kind='hist',bins=5,figsize=(16,7),figure_title="second")
+# plt.figure(figsize=(12, 7))
+# sns.boxplot(y="Serious or Critical",data=covid_data)
+
+
